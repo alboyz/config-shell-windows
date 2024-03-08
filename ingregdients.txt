@@ -1,0 +1,47 @@
+****************************
+
+	DESASLIVE
+
+****************************
+
+1. hack (NerdFonts) -> A Powerline Pacthed Font
+2. Scoop -> A Command Installer
+3. Oh-My-Post -> Prompt Engine
+4 Terminal Icon -> File and Folder icons
+5. PSREadLine -> CmdLets for Customizing the editing envoirement, uer for autocomplete
+6. Z -> Directory Jumper
+7. FZf, PSFzf -> fuzzy finder
+
+
+****PATH SETTING.JSON TERMINAL****
+
+C:\Users\Wind\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+
+
+
+*****Install Scoop********
+
+1. OPEN WINDOWS POWERSHELL  
+
+2. COPY AND PASTE THE FOLLOWIG COMMANDS : 
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Invoke-Expression "& {$(Invoke-RestMethod get.scoop.sh)} -RunAsAdmin"
+
+
+
+****Install Curl*****
+scoop install curl sudo jq
+
+
+****test curl****
+curl 'https://api.inkdrop.app/' | jq .
+
+
+
+
+****config user***
+.config\powershell\user_profile.ps1
+***set user***
+$PROFILE.CurrentUserCurrentHost
