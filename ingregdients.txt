@@ -45,3 +45,33 @@ curl 'https://api.inkdrop.app/' | jq .
 .config\powershell\user_profile.ps1
 ***set user***
 $PROFILE.CurrentUserCurrentHost
+
+
+
+
+****Terminal Icon***
+ Install-Module -Name Terminal-Icons -Repository PSGallery
+
+And then add one line to my $profile (edit with "code $profile"):
+
+Import-Module -Name Terminal-Icons
+
+
+
+***PSReadline***
+Install-Module PSReadLine
+The file C:\Users\[User]\Documents\WindowsPowerShell\profile.ps1 is used for all hosts (e.g. the ISE and powershell.exe). If you already have this file, then you should add the following:
+
+if ($host.Name -eq 'ConsoleHost')
+{
+    Import-Module PSReadLine
+}
+
+
+****fuzzy finder***
+scoop install fzf
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+
+https://medium.com/@dorlugasigal/how-to-set-up-your-powershell-f004c90bbafb
+
+
